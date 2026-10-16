@@ -1,3 +1,16 @@
+## Akun
+siswa
+usn : kevinalmer4@gmail.com
+pass : password
+
+admin
+usn : kevinalmer@apps.ipb.ac.id
+pass : password
+
+guru/pendamping
+usn: farisdff94@gmail.com
+pass: 12345678
+
 # BahasaKita — Ruang belajar adaptif
 
 Aplikasi React + Vite dengan Supabase Auth dan API Express. Mendukung siswa SD, SMP, dan SMA, asesmen adaptif, materi belajar, kamus visual, profil/foto, progres, serta pengelolaan konten oleh admin.
@@ -48,19 +61,6 @@ Siswa membuat kode undangan sekali pakai (24 jam) di **Pendamping**. Hanya akun 
 Jalankan `npm test` untuk unit/komponen, API, dan database lokal. `npm run test:all` menambahkan laporan coverage frontend, build produksi, dan seluruh alur browser. Untuk fokus unit saja gunakan `npm run test:unit`; laporan coverage terpisah dibuat dengan `npm run test:coverage`.
 
 Panduan setup, perintah, matriks fitur, CI, dan batas verifikasi ada di [TESTING.md](TESTING.md). Tes berjalan dengan data uji tanpa menulis ke Supabase asli. Pemeriksaan layanan cloud mengikuti [SETUP-SUPABASE.md](SETUP-SUPABASE.md).
-
-## Akun
-siswa
-usn : kevinalmer4@gmail.com
-pass : password
-
-admin
-usn : kevinalmer@apps.ipb.ac.id
-pass : password
-
-guru/pendamping
-usn: farisdff94@gmail.com
-pass: 12345678
 
 ## Struktur
 
