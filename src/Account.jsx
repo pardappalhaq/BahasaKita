@@ -23,10 +23,11 @@ export function AccountProvider({ children }) {
     const { error } = await supabase.auth.signInWithPassword({ email: email.trim().toLowerCase(), password })
     if (error) throw new Error(authErrorMessage(error, 'login'))
   }
+  const authRedirectOrigin = () => import.meta.env.VITE_AUTH_REDIRECT_URL || (typeof window !== 'undefined' ? window.location.origin : '')
   const register = async (email, password, profile) => {
     requireClient()
     const { data, error } = await supabase.auth.signUp({ email: email.trim().toLowerCase(), password,
-      options: { data: profile, emailRedirectTo: window.location.origin } })
+      options: { data: profile, emailRedirectTo: authRedirectOrigin() } })
     if (error) throw new Error(authErrorMessage(error))
     return !!data.session
   }
@@ -34,14 +35,14 @@ export function AccountProvider({ children }) {
     requireClient()
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: new URL('/signin', window.location.origin).toString() },
+      options: { redirectTo: new URL('/signin', authRedirectOrigin()).toString() },
     })
     if (error) throw new Error(authErrorMessage(error, 'google'))
   }
   const requestPasswordReset = async email => {
     requireClient()
     const { error } = await supabase.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
-      redirectTo: new URL('/reset-password', window.location.origin).toString(),
+      redirectTo: new URL('/reset-password', authRedirectOrigin()).toString(),
     })
     if (error) throw new Error(authErrorMessage(error, 'reset'))
   }
