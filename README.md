@@ -15,7 +15,7 @@ Untuk membagikan preview lokal melalui HTTPS sementara, ikuti [TUNNELING.md](TUN
 
 ## Aplikasi dan PWA
 
-Hasil build mendukung pemasangan **BahasaKita Learn** dari Pengaturan atau menu browser, dengan favicon dan ikon layar utama dari logo BahasaKita. Saat koneksi terputus, navigasi menampilkan halaman bantuan offline. Asesmen, video, chat, dan penyimpanan progres tetap memerlukan internet; service worker hanya menyimpan aset publik, tanpa cache data akun atau antrean jawaban/pesan. Pembaruan diterapkan setelah tab ditutup atau melalui tombol pembaruan di Pengaturan.
+Hasil build mendukung pemasangan **BahasaKita** dari Pengaturan atau menu browser, dengan favicon dan ikon layar utama dari logo BahasaKita. Saat koneksi terputus, navigasi menampilkan halaman bantuan offline. Asesmen, video, chat, dan penyimpanan progres tetap memerlukan internet; service worker hanya menyimpan aset publik, tanpa cache data akun atau antrean jawaban/pesan. Pembaruan diterapkan setelah tab ditutup atau melalui tombol pembaruan di Pengaturan.
 
 Jalankan `npm run test:pwa` untuk memeriksa manifest, instalabilitas Chromium, offline, dan pembaruan. PWA aktif pada versi produksi melalui HTTPS/localhost, bukan server pengembangan Vite. Panduan pemasangan, hosting, batas offline, pengujian, dan daftar file ada di [PWA.md](PWA.md).
 
@@ -48,6 +48,19 @@ Siswa membuat kode undangan sekali pakai (24 jam) di **Pendamping**. Hanya akun 
 Jalankan `npm test` untuk unit/komponen, API, dan database lokal. `npm run test:all` menambahkan laporan coverage frontend, build produksi, dan seluruh alur browser. Untuk fokus unit saja gunakan `npm run test:unit`; laporan coverage terpisah dibuat dengan `npm run test:coverage`.
 
 Panduan setup, perintah, matriks fitur, CI, dan batas verifikasi ada di [TESTING.md](TESTING.md). Tes berjalan dengan data uji tanpa menulis ke Supabase asli. Pemeriksaan layanan cloud mengikuti [SETUP-SUPABASE.md](SETUP-SUPABASE.md).
+
+## Akun
+siswa
+usn : kevinalmer4@gmail.com
+pass : password
+
+admin
+usn : kevinalmer@apps.ipb.ac.id
+pass : password
+
+guru/pendamping
+usn: farisdff94@gmail.com
+pass: 12345678
 
 ## Struktur
 
